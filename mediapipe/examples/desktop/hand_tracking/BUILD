@@ -32,6 +32,15 @@ cc_binary(
     ],
 )
 
+
+cc_binary(
+    name = "hand_tracking_cpu_out",
+    deps = [
+        "//mediapipe/examples/desktop:demo_run_graph_main_out",
+        "//mediapipe/graphs/hand_tracking:desktop_tflite_calculators",
+    ],
+)
+
 # Linux only
 cc_binary(
     name = "hand_tracking_gpu",
